@@ -1,0 +1,8 @@
+/* break points */
+@custom-media --viewport-sm-xs (width <= 375.98px);
+@custom-media --viewport-sm-x (width >= 376px);
+@custom-media --viewport-sm-c (width <= 576px) and (width >= 767.98px);
+@custom-media --viewport-sm (width <= 768px) and (width >= 991.98px);
+@custom-media --viewport-md (width <= 992px) and (width >= 1199.98px);
+@custom-media --viewport-lg (width <= 1200px) and (width >= 1286.98px);
+@custom-media --viewport-xl (width <= 1287px);

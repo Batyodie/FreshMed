@@ -1,0 +1,21 @@
+/* color vars */
+:root {
+  --accent: #00b6f0;
+  --titleBold: #20262a;
+  --basisText: #5c5c5c;
+  --mobileMenuText: #000;
+  --buttonBackground: #00b6f0;
+  --darkBackground: #182333;
+  --whiteBackground: #fff;
+
+  /* fonts vars */
+  --headline: 'Circular Std Black';
+  --secHeadline: 'Circular Std Bold';
+  --title: 'Circular Std Book';
+  --subHeading: 'Circular Std Book';
+  --buttonText: 'Circular Std Bold';
+  --subtitle: 'Circular Std Book';
+  --paragraphe: 'Circular Std Book', serif;
+  --linkText: 'Circular Std Book';
+  --mobileMenu: 'Circular Std Book';
+}
