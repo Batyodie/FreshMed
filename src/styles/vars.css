@@ -1,21 +1,16 @@
 /* color vars */
 :root {
-  --accent: #00b6f0;
-  --titleBold: #20262a;
-  --basisText: #5c5c5c;
-  --mobileMenuText: #000;
-  --buttonBackground: #00b6f0;
-  --darkBackground: #182333;
-  --whiteBackground: #fff;
+  --accent: #87ad3b;
+  --shadedAccent: #708c39;
+  --lightAccent: #acff5f;
+  --mediumAccent: #acd35f;
+  --basisText: #414042;
+  --menuBackground: #414042;
+  --element: #f0c53f;
+  --elementSecond: #d1d3d4;
+  --additional: #e89a04;
 
   /* fonts vars */
-  --headline: 'Circular Std Black';
-  --secHeadline: 'Circular Std Bold';
-  --title: 'Circular Std Book';
-  --subHeading: 'Circular Std Book';
-  --buttonText: 'Circular Std Bold';
-  --subtitle: 'Circular Std Book';
-  --paragraphe: 'Circular Std Book', serif;
-  --linkText: 'Circular Std Book';
-  --mobileMenu: 'Circular Std Book';
+  --bold: 'urceSansPro-Bold';
+  --paragraphe: 'SourceSansPro-Regular', serif;
 }

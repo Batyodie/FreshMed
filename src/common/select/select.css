@@ -1,0 +1,46 @@
+.select {
+  position: relative;
+  &-value {
+    transition: 0.5s;
+    display: block;
+    border: none;
+  }
+  &-option {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    transition: 0.5s;
+    left: 0;
+    width: 100%;
+  }
+  &__list {
+    position: relative;
+    height: 34px;
+  }
+  &__list,
+  &__item {
+    width: 54px;
+    z-index: 1000;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  &__icon {
+    position: absolute;
+    right: 5px;
+    top: 3px;
+    width: 10px;
+    transition: 0.5s;
+    height: 10px;
+    transform: rotate(-123deg);
+    background-repeat: no-repeat;
+    background-image: url('/assets/icon.svg');
+  }
+  &__item {
+    color: var(--basisText);
+    font-family: var(--bold);
+  }
+  &-option-on {
+    display: block;
+  }
+}

@@ -1,0 +1,131 @@
+/* footer */
+.footer {
+  background: var(--basisText);
+  &__menu-link {
+    font-size: 14px;
+    line-height: 18px;
+    text-decoration: none;
+    color: #fff;
+  }
+  &__link {
+    font-size: 20px;
+    line-height: 40px;
+    font-family: var(--paragraphe);
+    color: #fff;
+  }
+  &__menu-list-icon {
+    width: 20px;
+    height: 21px;
+    cursor: pointer;
+    &:hover {
+      circle {
+        fill: var(--additional);
+      }
+      path {
+        fill: #fff;
+      }
+    }
+  }
+  &__map {
+    display: flex;
+    justify-content: center;
+    min-width: 344px;
+    min-height: 269px;
+  }
+}
+.footer__menu-list-icon_hover_additional {
+  &:hover {
+    path {
+      fill: var(--additional);
+    }
+  }
+}
+.footer-icon_hover {
+  &:first-child {
+    &:hover {
+      path {
+        fill: #3b5998;
+      }
+    }
+  }
+}
+.footer-icon_hover-inst {
+  &:hover {
+    .footer-icon_hover-inst_accent {
+      fill: #c32aa3;
+    }
+  }
+}
+
+@media (width <= 345px) {
+  .footer {
+    &__map {
+      display: flex;
+      justify-content: center;
+      min-width: auto;
+      min-height: auto;
+    }
+  }
+}
+
+@media (width <= 375px) {
+  .footer {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    &__nav-content-wrapper {
+      margin-top: 41px;
+      margin-bottom: 50px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+    }
+    &__wrapper {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding-top: 50px;
+      padding-bottom: 5px;
+      padding-left: 5px;
+      padding-right: 5px;
+      &:last-child {
+        padding-top: 0;
+      }
+    }
+    &__menu-list-wrapper {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+    &__menu-list {
+      min-height: 200px;
+      justify-content: space-between;
+      min-width: 170px;
+      display: flex;
+      flex-direction: column;
+    }
+    &__menu-item {
+      display: flex;
+      margin-bottom: 20px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &-inner {
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    &__menu-list-icons-inner {
+      margin-top: 20px;
+      display: flex;
+      width: 118px;
+      justify-content: space-between;
+    }
+    &-menu-list__position {
+      min-height: 320px;
+    }
+  }
+}

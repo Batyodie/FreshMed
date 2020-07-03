@@ -1,0 +1,183 @@
+/* section action */
+.action {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #f7faf2;
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+  &__card {
+    box-shadow: 0 10px 20px rgba(137, 151, 107, 0.51);
+    border-radius: 8px;
+    z-index: 10;
+    width: 280px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    min-height: 314px;
+    border: none;
+    background: #fff;
+    &-image-woman {
+      min-width: 280px;
+      min-height: 240px;
+    }
+    &_padding_20 {
+      padding-top: 20px;
+      padding-left: 20px;
+      padding-bottom: 20px;
+    }
+    &-wrapper {
+      max-width: 116px;
+      z-index: 9;
+    }
+    &-wrapper-title {
+      text-align: left;
+      z-index: 10;
+    }
+    &-title {
+      font-size: 18px;
+      line-height: 23px;
+      color: var(--basisText);
+      font-family: var(--bold);
+      &_color_yellow {
+        color: #f0c53f;
+      }
+    }
+    &-wrapper-copy {
+      z-index: 100;
+    }
+    &-copy {
+      font-size: 14px;
+      line-height: 18px;
+      color: var(--basisText);
+      font-family: var(--paragraphe);
+      &_color_white {
+        color: #fff;
+      }
+      &_text_bold {
+        font-family: var(--bold);
+      }
+    }
+    &-logo {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 0;
+      margin: 0;
+      &_woman_height {
+        height: 229px;
+      }
+    }
+    &_woman-card_position {
+      bottom: 92px;
+      right: 189px;
+    }
+  }
+}
+.action__card-wrapper_massage_position {
+  justify-content: flex-end;
+}
+.action__card-wrapper_massage_width {
+  max-width: 100%;
+}
+.action__card-copy_font_18 {
+  font-size: 18px;
+  line-height: 18px;
+}
+.action__card-logo-content-orange_flex_column {
+  flex-direction: column;
+  text-align: center;
+}
+.action__card-logo-content-orange_massage_position {
+  top: 106px;
+  right: 196px;
+}
+.card__wrapper-copy_margin_bottom {
+  margin-bottom: 9px;
+}
+.glide-cards {
+  max-width: 900px;
+  height: 374px;
+  width: 100%;
+  margin: 0 auto;
+}
+.glide-cards_card_width {
+  max-width: 280px;
+  width: 100% !important;
+  z-index: 20;
+}
+
+@media (width >= 900px) {
+  .glide-cards {
+    height: 514px;
+  }
+  .glide__arrow--left_action-card_position {
+    left: 0;
+    top: 55%;
+  }
+  .glide__arrow--right_action-card_position {
+    right: 0;
+    top: 55%;
+  }
+}
+
+@media (width <= 899px) {
+  .glide-cards {
+    max-width: 600px;
+  }
+  .glide__arrow--left_action-card_position {
+    top: 65%;
+  }
+  .glide__arrow--right_action-card_position {
+    top: 65%;
+  }
+}
+
+@media (width >= 740px) {
+  .btn_action_size {
+    width: 150px;
+    height: 54px;
+  }
+  .btn_action_font {
+    font-size: 18px;
+    line-height: 23px;
+    font-family: var(--bold);
+  }
+  .glide-cards_card_width {
+    max-width: 360px;
+    position: relative;
+    z-index: 10;
+  }
+  .glide-cards {
+    max-width: 740px;
+  }
+}
+
+@media (width >= 1080px) {
+  .glide-cards {
+    max-width: 1080px;
+  }
+}
+
+@media (width >= 1110px) {
+  .glide-cards {
+    max-width: 1120px;
+  }
+}
+
+@media (width <= 599.98px) {
+  .glide-cards {
+    max-width: 280px;
+  }
+  .glide-cards_card_width {
+    max-width: 280px;
+  }
+}

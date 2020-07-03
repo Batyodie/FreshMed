@@ -2,8 +2,152 @@
 @import './styles/reset.css';
 @import './styles/fonts.css';
 @import './styles/vars.css';
+@import './styles/static/glide.core.css';
+@import './styles/static/glide.theme.css';
 
 /* project common blocks */
+
+/* modal  */
+@import 'common/modal/modal.css';
+
+/* header page */
+@import 'common/header/header.css';
+
+/* logo */
+@import 'common/logo/logo.css';
+
+/* button */
+@import 'common/btn/button.css';
+
+/* menu */
+@import 'common/menu/menu.css';
+
+/* accordion  */
+@import 'common/accordion/accordion.css';
+
+/* user */
+@import 'common/user/user.css';
+
+/* pull list */
+@import 'common/pull-list/pull-list.css';
+
+/* main banner section */
+@import 'common/main-banner/main-banner.css';
+
+/* glide slider */
+@import 'common/gilide-slider/glide-slider.css';
+
+/* aside button */
+@import 'common/aside-btn/aside-btn.css';
+
+/* section header block */
+@import 'common/section-header/section-header.css';
+
+/* grid services */
+
+@import 'common/grid-services/grid-services.css';
+
+/* card block */
+
+@import 'common/card/card.css';
+
+/* section action */
+
+@import 'common/action/action.css';
+
+/* advantages */
+
+@import 'common/advantages/advantages.css';
+
+/* grid content */
+
+@import 'common/grid-content/grid-content.css';
+
+/* section doctors */
+@import 'common/doctors/doctors.css';
+
+/* section form */
+@import 'common/form/form.css';
+
+/* call back form block */
+@import 'common/call-form/call-form.css';
+
+/* call form modal block */
+@import 'common/call-form-modal/call-form-modal.css';
+
+/* section about-us */
+@import 'common/about-us/about-us.css';
+
+/* video */
+@import 'common/video/video.css';
+@import 'common/iframe-loader/iframe-loader.css';
+
+/* footer */
+@import 'common/footer/footer.css';
+
+/* project common touch blocks */
+
+/* project desktop blocks */
+
+/* section header block */
+@import 'desktop/section-header/section-header.css';
+
+/* glide slider desktop */
+@import 'desktop/gilide-slider/gilide-slider.css';
+
+/* glide touch slider */
+@import 'touch/gilide-slider/gilide-slider.css';
+
+/* menu desktop */
+@import 'desktop/menu/menu.css';
+
+/* accordion desktop */
+@import 'desktop/accordion/accordion.css';
+
+/* user */
+@import 'desktop/user/user.css';
+
+/* footer desktop */
+@import 'desktop/footer/footer.css';
+
+/* project touch blocks */
+@import 'touch/header/header.css';
+@import 'touch/promp-modal/promp-modal.css';
+
+/* burger btn */
+@import 'touch/burger-btn/burger-btn.css';
+
+/* menu mobile */
+@import 'touch/menu/menu.css';
+
+/* user */
+@import 'touch/user/user.css';
+
+/* select  */
+@import 'common/select/select.css';
+
+/* grid content touch */
+
+@import 'touch/grid-content/grid-content.css';
+
+/* section action */
+@import 'touch/action/action.css';
+
+/* section doctors */
+@import 'touch/doctors/doctors.css';
+
+/* video */
+@import 'touch/video/video.css';
+
+/* footer touch */
+@import 'touch/footer/footer.css';
+img {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+img[data-src] {
+  opacity: 0;
+}
 html {
   overflow-x: hidden;
 }
@@ -12,4 +156,8 @@ body {
   line-height: 30px;
   font-style: normal;
   overflow-x: hidden;
+  font-family: sans-serif, Arial;
+}
+.fonts-loaded body {
+  font-family: var(--paragraphe), Arial;
 }

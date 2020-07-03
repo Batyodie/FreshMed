@@ -1,0 +1,85 @@
+
+.btn {
+  border-radius: 8px;
+  width: 136px;
+  height: 39px;
+  border: none;
+  background: var(--accent);
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  &__body {
+    color: #fff;
+    font-size: 12px;
+    line-height: 15px;
+    font-family: var(--bold);
+  }
+  &:hover {
+    background: var(--shadedAccent);
+    transition: all 0.5s ease-in-out;
+  }
+  &:active {
+    background: var(--shadedAccent);
+    transform: translateY(10px) scale(0.98);
+  }
+  &:focus {
+    background: var(--shadedAccent);
+    border: 1px solid var(--accent);
+  }
+}
+.btn_background_transparent {
+  background: #fff;
+  border: 2px solid var(--accent);
+}
+.btn__body_color_accent {
+  color: var(--accent);
+}
+.btn_hover_transparent {
+  &:hover {
+    .btn__body_color_accent {
+      color: #fff;
+    }
+  }
+}
+.btn_border_transparent {
+  border: 2px solid #fff;
+}
+.btn_active-border_transparent {
+  &:active {
+    border: 2px solid #fff;
+  }
+  &:focus {
+    border: 2px solid #fff;
+  }
+}
+.btn_action_shadow {
+  box-shadow: 0 5px 20px rgba(232, 154, 4, 0.3);
+}
+.btn_action_size {
+  width: 110px;
+  height: 43px;
+}
+.btn_doctors_size {
+  width: 196px;
+  height: 53px;
+}
+.btn_doctors_style {
+  border: 2px solid var(--accent);
+  border-radius: 4px;
+}
+.btn__call-form_size {
+  width: 238px;
+  height: 57px;
+}
+.btn__body-call-form__font {
+  font-size: 20px;
+  line-height: 25px;
+}
+.btn__body-doctors_font {
+  font-size: 18px;
+  line-height: 23px;
+}

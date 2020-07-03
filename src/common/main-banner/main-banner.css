@@ -1,0 +1,15 @@
+.main-banner {
+  position: relative;
+  &__slide-logo {
+    width: 100%;
+    min-height: 226px;
+  }
+}
+
+@media (width >= 1439.98px) {
+  .main-banner {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}

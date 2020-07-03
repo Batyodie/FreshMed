@@ -1,0 +1,31 @@
+/* header page */
+.header {
+  /* header address list */
+  &__address-list {
+    /* header address inner  */
+    &__button-record {
+      min-width: 136px;
+      min-height: 39px;
+    }
+  }
+
+  /* header icon */
+  &__icon {
+    width: 34px;
+    height: 34px;
+    &-image {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  /* header link */
+  &__link {
+    font-family: var(--paragraphe);
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--basisText);
+    text-decoration: none;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,9 @@
+.logo {
+  max-width: 202px;
+  width: 100%;
+  min-width: 176px;
+  &__image {
+    width: 195px;
+    height: 120px;
+  }
+}

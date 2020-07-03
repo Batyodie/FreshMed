@@ -1,0 +1,130 @@
+/* grid services */
+.grid-services {
+  min-width: calc(158px + 158px + 14px);
+  min-height: 165px;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  &_margin_top {
+    margin-top: 56px;
+  }
+}
+
+/* ie 11 */
+@media (width <= 829.98px) {
+  .grid-services {
+    display: flex;
+    max-width: 1440px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    flex-direction: column;
+    &__wrapper {
+      max-width: 830px;
+      width: 100%;
+      justify-content: space-around;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &__flex-wrapper {
+      display: flex;
+    }
+  }
+  .card {
+    margin-top: 60px;
+    &:nth-child(1) {
+      margin-top: 0;
+    }
+    &:nth-child(2) {
+      margin-top: 0;
+    }
+    &:nth-child(3) {
+      margin-top: 0;
+    }
+    &:nth-child(4) {
+      margin-top: 0;
+    }
+  }
+}
+
+@media (width >= 830px) {
+  .grid-services {
+    max-width: 1440px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    &__wrapper {
+      max-width: 1110px;
+      width: 100%;
+      margin: 0 auto;
+      justify-content: space-around;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &__flex-wrapper {
+      display: flex;
+    }
+  }
+  .card {
+    margin-top: 60px;
+    &:nth-child(1) {
+      margin-top: 0;
+    }
+    &:nth-child(2) {
+      margin-top: 0;
+    }
+    &:nth-child(3) {
+      margin-top: 0;
+    }
+    &:nth-child(4) {
+      margin-top: 0;
+    }
+  }
+}
+
+@supports (display: grid) {
+  @media (width <= 829.98px) {
+    .grid-services {
+      &__wrapper {
+        display: grid;
+        grid-column-gap: 15px;
+        grid-row-gap: 34px;
+        grid-template-columns: repeat(auto-fill, minmax(158px, 1fr));
+      }
+    }
+    .card {
+      margin-top: 0;
+    }
+  }
+
+  @media (width >= 830px) {
+    .grid-services {
+      &__wrapper {
+        display: grid;
+        justify-items: center;
+        justify-content: center;
+        grid-column-gap: 5px;
+        grid-row-gap: 65px;
+        grid-template-columns: repeat(4, minmax(159px, 230px));
+      }
+    }
+    .card {
+      margin-top: 0;
+    }
+  }
+
+  @media (width >= 1109px) {
+    .grid-services {
+      &__wrapper {
+        display: grid;
+        justify-items: center;
+        justify-content: center;
+        grid-column-gap: 65px;
+        grid-row-gap: 65px;
+        grid-template-columns: repeat(4, minmax(159px, 230px));
+      }
+    }
+  }
+}

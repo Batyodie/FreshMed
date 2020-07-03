@@ -1,0 +1,8 @@
+/* touch user */
+@media (width <= 900px) {
+  .user {
+    &__name {
+      display: none;
+    }
+  }
+}

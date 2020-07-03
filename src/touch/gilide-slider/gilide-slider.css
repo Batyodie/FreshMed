@@ -1,0 +1,244 @@
+/* glide slider touch */
+
+@media (width <= 424.98px) {
+  .glide {
+    &__slide-wrapper {
+      position: absolute;
+      z-index: 10;
+      top: 20%;
+      left: 5%;
+    }
+    &__slide-content {
+      position: relative;
+      background-image: url('/assets/Main_5.png');
+      min-height: 226px;
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+@media (width >= 425px) {
+  .glide {
+    &__slide-content {
+      position: relative;
+      background-image: url('/assets/Main_4.png');
+      max-width: 100%;
+      width: 100%;
+      min-height: 226px;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+@media (width >= 500px) {
+  .glide {
+    &__slide-content {
+      min-height: 240px;
+    }
+  }
+}
+
+@media (width >= 600px) {
+  .glide {
+    &__slide-content {
+      min-height: 300px;
+    }
+  }
+}
+
+@media (width >= 700px) {
+  .glide {
+    &__slide-content {
+      min-height: 350px;
+    }
+  }
+}
+
+@media (width <= 829.98px) {
+  .glide {
+    &__arrow {
+      display: none;
+    }
+    &__slide-title_mobile_size {
+      font-size: 20px;
+      line-height: 25px;
+    }
+    &__slide-content-title {
+      max-width: 200px;
+    }
+    &__slide-content-copy {
+      display: none;
+    }
+    &__slide-wrapper {
+      position: absolute;
+      z-index: 10;
+      top: 20%;
+      left: 5%;
+    }
+    &__slide-aside-buttons {
+      position: absolute;
+      z-index: 11;
+      bottom: -100px;
+      right: 45px;
+    }
+  }
+  .btn__slide_mobile_size {
+    width: 149px;
+    height: 38px;
+  }
+  .btn__slide_mobile_font {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+@media (width <= 375px) {
+  .glide {
+    &__slide-aside-buttons {
+      position: absolute;
+      z-index: 11;
+      bottom: -100px;
+      right: 25px;
+    }
+  }
+}
+
+@media (width >= 800px) {
+  .glide {
+    &__slide-content {
+      min-height: 400px;
+    }
+  }
+}
+
+@media (width >= 830px) {
+  .glide {
+    &__slide-content {
+      min-height: 430px;
+    }
+    &__slide-title_mobile_size {
+      font-size: 46px;
+      line-height: 50px;
+    }
+    &__slide-content-title {
+      max-width: 400px;
+    }
+    &__slide-content-copy {
+      max-width: 400px;
+      margin-bottom: 20px;
+    }
+    &__slide-wrapper {
+      position: absolute;
+      z-index: 10;
+      top: 20%;
+      left: 10%;
+    }
+    &__slide-aside-buttons {
+      position: absolute;
+      z-index: 11;
+      bottom: -35px;
+      right: 82px;
+    }
+  }
+  .btn__slide_desktop_size {
+    width: 226px;
+    height: 61px;
+  }
+  .btn__slide_desktop_font {
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
+
+@media (width >= 900px) {
+  .glide {
+    &__slide-content {
+      min-height: 500px;
+    }
+  }
+}
+
+@media (width >= 1050px) {
+  .glide {
+    &__slide-content {
+      min-height: 600px;
+    }
+    &__slide-title_desktop_size {
+      font-size: 50px;
+      line-height: 60px;
+    }
+    &__slide-content-title {
+      max-width: 550px;
+    }
+    &__slide-content-copy {
+      max-width: 500px;
+      margin-bottom: 30px;
+    }
+    &__slide-wrapper {
+      position: absolute;
+      z-index: 10;
+      top: 20%;
+      left: 15%;
+    }
+    &__slide-aside-buttons {
+      position: absolute;
+      z-index: 11;
+      bottom: -35px;
+      right: 82px;
+    }
+  }
+}
+
+@media (width >= 1250px) {
+  .glide {
+    &__slide-content {
+      min-height: 650px;
+    }
+  }
+}
+
+@media (width >= 1350px) {
+  .glide {
+    &__slide-content {
+      min-height: 696px;
+    }
+    &__slide-title_desktop_size {
+      font-size: 56px;
+      line-height: 70px;
+    }
+    &__slide-content-title {
+      max-width: 590px;
+    }
+    &__slide-content-copy {
+      max-width: 590px;
+      margin-bottom: 30px;
+    }
+    &__slide-wrapper {
+      position: absolute;
+      z-index: 10;
+      top: 20%;
+      left: 15%;
+    }
+    &__slide-aside-buttons {
+      position: absolute;
+      z-index: 11;
+      bottom: -110px;
+      right: 82px;
+    }
+  }
+}
+
+@media (width >= 1439.98px) {
+  .glide {
+    max-width: 1440px;
+    width: 100%;
+    &__slide-content {
+      max-width: 1440px;
+      width: 100%;
+    }
+  }
+}

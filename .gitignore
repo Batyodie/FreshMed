@@ -1,5 +1,8 @@
 *.rbc
 capybara-*.html
+/idea
+.idea
+/.idea
 .rspec
 /log
 /tmp

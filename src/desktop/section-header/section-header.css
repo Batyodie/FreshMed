@@ -1,0 +1,17 @@
+/* section header desktop */
+@media (width >= 830px) {
+  .section-header {
+    &__title {
+      font-size: 48px;
+      line-height: 60px;
+    }
+    &__wrapper-copy {
+      max-width: 561px;
+      margin: 0 auto;
+    }
+    &__copy {
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
+}

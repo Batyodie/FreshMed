@@ -1,0 +1,9 @@
+/* user */
+.user {
+  &__name {
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff;
+    font-family: var(--bold);
+  }
+}

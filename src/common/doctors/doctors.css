@@ -1,0 +1,32 @@
+/* section doctors */
+.doctors {
+  &__content {
+    &-wrapper-title {
+      text-align: center;
+    }
+    &-title {
+      font-family: var(--bold);
+      color: var(--basisText);
+      font-size: 23px;
+      line-height: 29px;
+    }
+    &-wrapper-copy {
+      text-align: center;
+    }
+    &-copy {
+      font-size: 18px;
+      line-height: 23px;
+      color: var(--basisText);
+      font-family: var(--paragraphe);
+    }
+  }
+  &__buttons {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* modificator */
+.doctors__content-title_color_accent {
+  color: var(--accent);
+}

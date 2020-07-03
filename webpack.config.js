@@ -9,6 +9,18 @@ const postcssPresetEnv = require('postcss-preset-env');
 const postcss = require('postcss-nested')
 // const postcss-scss = require('postcss-scss')
 const StylelintPlugin = require('stylelint-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const ImageminPlugin = require('imagemin-webpack-plugin').default
+const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
+const PurifyCSSPlugin = require('purifycss-webpack');
+const glob = require('glob-all');
+const PurgecssPlugin = require('purgecss-webpack-plugin');
+const BrotliPlugin = require('brotli-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const PATHS = {
+    src: path.join(__dirname, 'src')
+}
+
 
 
 
@@ -18,13 +30,20 @@ const isProd = !isDev
 const optimization = () => {
     const config ={
         splitChunks: {
-            chunks: 'all'
-        }
+            chunks: 'all',
+        },
     }
     if (isProd){
         config.minimizer = [
             new OptimizeCssAssetWebpackPlugin(),
-            new TerserWebpackPlugin(),
+            new TerserWebpackPlugin({
+                terserOptions: {
+                    output: {
+                        comments: false,
+                    },
+                },
+                cache: true,
+            }),
         ]
     }
     return config
@@ -48,15 +67,19 @@ const cssLoaders = extra =>{
                     postcssPresetEnv({
                         filename: filename('css'),
                         stage: 1,
+                        autoprefixer: { grid: true},
                         features: {
-                            'nesting-rules': true
-                        }
+                            'nesting-rules': true,
+                        },
+                        importFrom: [
+                            'src/styles.css',
+                            'src/styles/vars.css',
+                            'src/styles/break-points.css'
+                        ],
                     }),
                     postcss({
 
                     })
-
-
 
                 ]
             }
@@ -73,15 +96,18 @@ const cssLoaders = extra =>{
 
 
 module.exports = {
+
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
     entry: {
         main: ['@babel/polyfill', './index.js'],
 
+
     },
     output: {
         filename: filename('js'),
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: '/',
     },
     resolve: {
         extensions: ['.js', '.json', '.png'],
@@ -103,6 +129,7 @@ module.exports = {
             inject: 'body',
             minify: {
                 collapseWhitespace: isProd,
+                removeComments: isProd
             }
         }),
         new CleanWebpackPlugin(),
@@ -110,43 +137,57 @@ module.exports = {
             {
                 from: path.resolve(__dirname, 'src/assets'),
                 to: path.resolve(__dirname, 'dist/assets'),
+            },
+            {
+                from: path.resolve(__dirname, 'src/common/*/*.{svg,png,jpg,gif}'),
+                to: path.resolve(__dirname, 'dist/assets/[name].[ext]'),
             }
         ]),
         new MiniCssExtractPlugin({
-            filename: filename('css'),
+            filename: isDev ? '[name].css' : '[name].[hash].css',
         }),
-
-
-
-
+        new StylelintPlugin ({
+            files: ['**/*.{vue,htm,html,css,sss,less,scss,sass}'],
+        }),
+        new ImageminPlugin({
+            disable: process.env.NODE_ENV !== 'production', // Disable during development
+            pngquant: {
+                quality: '65'
+            }
+        }),
+        new HardSourceWebpackPlugin(),
+        new PurgecssPlugin({
+            paths: glob.sync(`${PATHS.src}/**/*`,  { nodir: true }),
+        }),
+         new BrotliPlugin({
+             asset: '[path].br[query]',
+             test: /\.(js|css|html|svg)$/,
+             threshold: 10240,
+             minRatio: 0.8
+         }),
+        new BundleAnalyzerPlugin()
     ],
     module: {
         rules: [
             {
                 test: /\.css$/,
                 use: [
-                    'style-loader',
-                    { loader: 'css-loader', options: { importLoaders: 1 } },
+                     isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+                    { loader: 'css-loader', options: { importLoaders: 2 } },
                     { loader: 'postcss-loader', options: {
                             ident: 'postcss',
                             plugins: () => [
                                 postcssPresetEnv({
-                                    stage: 2
-                                })
-                            ]
-                        } }
-                ]
-            },
-            {
-                test: /\.less$/,
-                use: [
-                    'style-loader',
-                    { loader: 'css-loader', options: { importLoaders: 1 } },
-                    { loader: 'postcss-loader', options: {
-                            ident: 'postcss',
-                            plugins: () => [
-                                postcssPresetEnv({
-                                    stage: 2
+                                    stage: 1,
+                                    autoprefixer: { grid: true},
+                                    features: {
+                                        'nesting-rules': true,
+                                    },
+                                    importFrom: [
+                                        'src/styles.css',
+                                        'src/styles/vars.css',
+                                        'src/styles/break-points.css'
+                                    ],
                                 })
                             ]
                         } }
@@ -160,9 +201,6 @@ module.exports = {
             {
                 test: /\.(png|jpg|svg|gif)$/,
                 loader: 'file-loader',
-                options: {
-                    name: 'assets/[name].[ext]'
-                },
             },
             {
                 test: /\.(ttf|woff|woff2|eot)$/,

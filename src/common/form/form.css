@@ -1,0 +1,77 @@
+/* section form */
+.form {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  background: #f7faf2;
+  z-index: 0;
+  position: relative;
+  &:before {
+    content: '';
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+  }
+  &__wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #fff;
+    max-width: 528px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+.form_margin_top {
+  margin-top: 50px;
+}
+.form__wrapper_padding_top {
+  padding-top: 34px;
+}
+
+@media (width <= 599.98px) {
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 919px;
+    &:before {
+      background-image: url('/assets/backgroundDesktop.png');
+    }
+  }
+}
+
+@media (width >= 600px) {
+  .form {
+    min-height: 1000px;
+    &__header {
+      margin-top: 60px;
+    }
+    &:before {
+      background-image: url('/assets/backgroundDesktop.png');
+    }
+  }
+  .form__wrapper_padding_top {
+    padding-top: 0;
+  }
+}
+
+@media (width >= 1000px) {
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 1291px;
+    &:before {
+      background-image: url('/assets/backgroundDesktop.png');
+    }
+  }
+}

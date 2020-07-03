@@ -1,55 +1,27 @@
+/* fonts */
 @font-face {
-  font-family: 'Circular Std Med';
-  src: url('/assets/fonts/CircularStd-Medium.eot');
+  font-family: 'urceSansPro-Bold';
   src:
-    local('Circular Std Medium'),
-    local('CircularStd-Medium'),
-    url('/assets/fonts/CircularStd-Medium.eot?#iefix') format('embedded-opentype'),
-    url('/assets/fonts/CircularStd-Medium.woff2') format('woff2'),
-    url('/assets/fonts/CircularStd-Medium.woff') format('woff'),
-    url('/assets/fonts/CircularStd-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
+    local('SansPro-Bold'),
+    url('/assets/fonts/SourceSansPro-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('/assets/fonts/sourcesanspro-bold-webfont.woff') format('woff'), /* Modern Browsers */
+    url('/assets/fonts/sourcesanspro-bold-webfont.woff2') format('woff2'); /* Modern Browsers */
 
-@font-face {
-  font-family: 'Circular Std Bold';
-  src: url('/assets/fonts/CircularStd-Bold.eot');
-  src:
-    local('Circular Std Bold'),
-    local('CircularStd-Bold'),
-    url('/assets/fonts/CircularStd-Bold.eot?#iefix') format('embedded-opentype'),
-    url('/assets/fonts/CircularStd-Bold.woff2') format('woff2'),
-    url('/assets/fonts/CircularStd-Bold.woff') format('woff'),
-    url('/assets/fonts/CircularStd-Bold.ttf') format('truetype');
+  font-display: swap;
   font-weight: bold;
   font-style: normal;
 }
 
+/* font converted using font-converter.net. thank you! */
 @font-face {
-  font-family: 'Circular Std Book';
-  src: url('/assets/fonts/CircularStd-Book.eot');
+  font-family: 'SourceSansPro-Regular';
   src:
-    local('Circular Std Book'),
-    local('CircularStd-Book'),
-    url('/assets/fonts/CircularStd-Book.eot?#iefix') format('embedded-opentype'),
-    url('/assets/fonts/CircularStd-Book.woff2') format('woff2'),
-    url('/assets/fonts/CircularStd-Book.woff') format('woff'),
-    url('/assets/fonts/CircularStd-Book.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
+    local('SansPro-Regular'),
+    url('/assets/fonts/SourceSansPro-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('/assets/fonts/sourcesanspro-regular-webfont.woff') format('woff'), /* Modern Browsers */
+    url('/assets/fonts/sourcesanspro-regular-webfont.woff2') format('woff2'); /* Modern Browsers */
 
-@font-face {
-  font-family: 'Circular Std Black';
-  src: url('/assets/fonts/CircularStd-Black.eot');
-  src:
-    local('Circular Std Black'),
-    local('CircularStd-Black'),
-    url('/assets/fonts/CircularStd-Black.eot?#iefix') format('embedded-opentype'),
-    url('/assets/fonts/CircularStd-Black.woff2') format('woff2'),
-    url('/assets/fonts/CircularStd-Black.woff') format('woff'),
-    url('/assets/fonts/CircularStd-Black.ttf') format('truetype');
-  font-weight: 900;
+  font-display: swap;
+  font-weight: normal;
   font-style: normal;
 }
