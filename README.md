@@ -52,11 +52,15 @@ Give an example
 ## Deployment
 
 Add additional notes about how to deploy this on a live system
-1)Register at heroku.com
-2)To create a new application in Heroku, click on the lonely “New” button in the upper right corner of the Dashboard and select “Create new app” from the short list
-3)build the application through npm run build
-4)cd dist
-5)create package.json 
+1)Register at heroku.com.
+
+2)To create a new application in Heroku, click on the lonely “New” button in the upper right corner of the Dashboard and select “Create new app” from the short list/.
+
+3)build the application through npm run build.
+
+4)cd dist.
+
+5)create package.json.
 {
   "name": "my Project",
   "version": "1.0.0",
@@ -67,25 +71,29 @@ Add additional notes about how to deploy this on a live system
     "postinstall": "npm install express"
   }
 }
-6)npm install express
-7)create server.js
-var express = require('express')
-var path = require('path')
-var serveStatic = require('serve-static')
-app = express()
+
+6)npm install express.
+
+7)create server.js.
+
+var express = require('express').
+var path = require('path').
+var serveStatic = require('serve-static').
+app = express().
 app.use(serveStatic(__dirname))
 var port = process.env.PORT || 5000
 app.listen(port)
 console.log('server started ' + port)
-8)dist|master ⇒ npm start
+
+8)dist|master ⇒ npm start.
 ...
-server started 5000
-9)heroku git:remote -a my-project
-10) cd root
-11) open .gitignone delete /dist
-12) git status git add git commit
-13) heroku buildpacks:set heroku/nodejs
-14 git subtree push --prefix vuejs-test-app/dist heroku master
+server started 5000.
+9)heroku git:remote -a my-project.
+10) cd root.
+11) open .gitignone delete /dist.
+12) git status git add git commit.
+13) heroku buildpacks:set heroku/nodejs.
+14 git subtree push --prefix vuejs-test-app/dist heroku master.
 
 ## Authors
 
