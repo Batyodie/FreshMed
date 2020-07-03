@@ -1,0 +1,13 @@
+{
+  "name": "fresh-med-app",
+  "version": "1.0.1",
+  "description": "Heroku App",
+  "author": "gearmobile",
+  "private": true,
+  "scripts": {
+    "postinstall": "npm install express"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
